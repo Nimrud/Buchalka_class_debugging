@@ -4,6 +4,13 @@ import static junit.framework.TestCase.*;
 
 public class BankAccountTest {
 
+    // METODY:
+    // assertEquals() lub assertNotEquals()
+    // assertArrayEquals() - porównuje, czy tablice mają tę samą wielkość, te same wartości oraz czy są w tej samej kolejności
+    // assertNull() lub assertNotNull()
+    // assertSame() lub assertNotSame() - porównuje, czy obiekty są tą samą instancją (porównanie referencji)
+    // assertThat() - porównuje daną wartość z całym zestawem wartości
+
     @org.junit.Test
     public void deposit() {
         //fail("To be implemented");

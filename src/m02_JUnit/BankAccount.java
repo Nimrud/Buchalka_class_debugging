@@ -36,7 +36,17 @@ public class BankAccount {
     }
 
     public double withdraw(double amount, boolean branch){
-        balance -= amount;
+        if (!branch && (amount > 500.00)){
+            System.out.println("You can withdraw up to 500 at ATM.");
+            throw new IllegalArgumentException();
+        }
+
+        if (amount <= balance){
+            balance -= amount;
+        } else {
+            System.out.println("You cannot withdraw more than you have.");
+            throw new IllegalArgumentException("[legal note]");
+        }
         return balance;
     }
 
