@@ -1,5 +1,7 @@
 package m03_challenges1;
 
+import java.util.Arrays;
+
 public class Utilities {
 
     // There may be intentional bugs in methods below
@@ -8,6 +10,7 @@ public class Utilities {
     // When sourceArray.length < n, returns sourceArray
     public char[] everyNthChar(char[] sourceArray, int n){
         if (sourceArray == null || sourceArray.length < n){
+            System.out.println("N greater than length of the string or null");
             return sourceArray;
         }
 
@@ -26,15 +29,18 @@ public class Utilities {
     // by removing one occurrence of the character
     // example: "ABBCDEEF" => "ABCDEF"
     public String removePairs(String source){
-        if (source.length() < 2){
+        if (source == null || source.length() < 2){    // <- naprawiona metoda
             return source;
         }
 
         StringBuilder sb = new StringBuilder();
         char[] string = source.toCharArray();
 
+        int length = string.length;    // <- naprawiona metoda
+        char[] newString = Arrays.copyOf(string, length+1);   // <- naprawiona metoda
+
         for (int i = 0; i < string.length; i++){
-            if (string[i] != string[i++]){
+            if (string[i] != newString[i+1]){     // <- naprawiona metoda
                 sb.append(string[i]);
             }
         }
