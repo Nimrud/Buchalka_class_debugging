@@ -28,6 +28,26 @@ public class Main {
         // CHALLENGE 5
         // Add a test for a case, when the value of n is greater than the length of the string
 
+        // CHALLENGE 6
+        // Write 2 tests for the nullIfOddLength() method
+        // Add them to the same test method
+        // In one test, pass a string that has even length
+        // and in second - odd length
+
+        // CHALLENGE 7
+        // Add a test for the converter() method
+        // Input: a = 10, b = 5
+        // Output: 300
+
+        // CHALLENGE 8
+        // Write another test for the converter() method
+        // Input: a = 10, b = 0
+        // Output: ArithmeticException (divide by 0)
+
+        // CHALLENGE 9
+        // Reduce code repetition
+        // Every test starts by creating an instance of the Utility class
+        // Modify the code so that it doesn't have this repetitive code
 
     }
 }

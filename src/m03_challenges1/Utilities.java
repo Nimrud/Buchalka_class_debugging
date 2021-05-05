@@ -49,6 +49,10 @@ public class Utilities {
 
     // Perform a conversion based on an internal business rule
     public int convert(int a, int b){
+        if (b == 0) {
+            System.out.println("Cannot divide by 0");
+            throw new ArithmeticException();
+        }
         return (a / b) + (a * 30) - 2;
     }
 
